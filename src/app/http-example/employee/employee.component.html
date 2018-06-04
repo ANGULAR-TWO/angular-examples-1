@@ -1,0 +1,15 @@
+
+<h1>Get All</h1>
+
+<ul class="list-group">
+  <li *ngFor="let emp of employees" class="list-group-item">
+    {{emp | json}}
+    <button (click)='updateEmployee(emp)'>Update</button>
+    |
+    <button (click)='deleteEmployee(emp)'>Delete</button>
+  </li>
+</ul>
+
+<h1>Create</h1>
+
+<input (keyup.enter)='createEmployee(lastName)' #lastName type="text" class="form-control">
